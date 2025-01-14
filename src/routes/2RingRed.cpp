@@ -37,5 +37,7 @@ void test3() {
     TurnMaxTimePID(TestPara, -67, 0.4, true);
     RunRoller(100);
     MoveEncoderPID(TestPara, -80, 30, 0.4, -67, true);
-    
+    Clamp.set(false);
+    TurnMaxTimePID(TestPara, -40, 0.4, true);
+    MoveEncoderPID(TestPara, 80, 33, 0.4, -40, true);
 }

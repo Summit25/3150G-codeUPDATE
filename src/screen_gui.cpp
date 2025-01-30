@@ -44,16 +44,16 @@ void DisplayWords(void)
   Brain.Screen.print("4 Ring Red");
 
   Brain.Screen.setCursor(7,3);
-  Brain.Screen.print("Skibidi");
+  Brain.Screen.print("4RingRedAlt");
 
     Brain.Screen.setCursor(11,3);
-  Brain.Screen.print("GS-AWP");
+  Brain.Screen.print("SoloAWP");
 
     Brain.Screen.setCursor(3,40);
   Brain.Screen.print("4 Ring Blue");
 
   Brain.Screen.setCursor(7,40);
-  Brain.Screen.print("hi cheddar cheese");
+  Brain.Screen.print("4RingBlueAlt");
 
     Brain.Screen.setCursor(11,40);
   Brain.Screen.print("ML-AWP");

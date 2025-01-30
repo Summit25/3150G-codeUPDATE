@@ -11,4 +11,5 @@ extern void test3();
 extern void test4();
 extern void test5();
 extern void test6();
+extern void test7();
 #endif

@@ -259,7 +259,7 @@ if(AutoSelectorVal==5)// empty
 
 if(AutoSelectorVal==6)//AWP only
 {
-  
+  test7();
 }
 
 

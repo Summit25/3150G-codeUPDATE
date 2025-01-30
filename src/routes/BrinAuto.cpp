@@ -6,13 +6,19 @@
 // TurnMaxTimePID(TestPara, Desired Heading -180 to 180, time out to calculate turn, Braking?)
 // MoveTimePID(TestPara, motor speed, time traveled (sec), time to full speed, heading, false);
 
-void test5() {
+void test7() {
     // declare initial conditions
     //PIDDataSet TestPara={4,0.1,0.2};
     PIDDataSet TestPara={1.5,0.1,0.15};
-    //MoveEncoderPID(TestPara, -80, 10, 0.4, 0, true);
-    TurnMaxTimePID(TestPara, -150, 0.7, true);
-
-    
-    
+    MoveEncoderPID(TestPara, 80, 20, 0.4, 0, true);
+    MoveEncoderPID(TestPara, 40, 15, 0.5, 0, true);
+    Clamp.set(true);
+    wait(200, msec);
+    RunRoller(100);
+    wait(100, msec);
+    TurnMaxTimePID(TestPara, -60, 0.4, true);
+    MoveEncoderPID(TestPara, -80, 25, 0.5, -60, true);
+    TurnMaxTimePID(TestPara, -20, 0.4, true);
+    MoveEncoderPID(TestPara, 80, 30, 0.5, -20, true);
+    RunRoller(30);
 }

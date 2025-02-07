@@ -19,17 +19,17 @@ void test() {
     RunRoller(100);
     wait(100, msec);
     TurnMaxTimePID(TestPara, 160, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 32, 0.5, 160, true);
+    MoveEncoderPID(TestPara, -80, 29, 0.5, 160, true);
     wait(100, msec);
-    MoveEncoderPID(TestPara, 80, 6, 0.5, 160, true);
-    TurnMaxTimePID(TestPara, 141, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 16, 0.5, 141, true);
+    MoveEncoderPID(TestPara, 80, 12, 0.5, 160, true);
+    TurnMaxTimePID(TestPara, 148, 0.4, true);
+    MoveEncoderPID(TestPara, -80, 9, 0.5, 148, true);
     wait(200, msec);
-    MoveEncoderPID(TestPara, 80, 40, 0.5, 141, true);
+    MoveEncoderPID(TestPara, 80, 40, 0.5, 148, true);
     TurnMaxTimePID(TestPara, 120, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 38, 0.5, 120, true);
+    MoveEncoderPID(TestPara, -80, 45, 0.5, 120, true);
     wait(400, msec);
     TurnMaxTimePID(TestPara, -90, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 42, 0.5, -90, true);
+    MoveEncoderPID(TestPara, -80, 35, 0.5,-90, true);
     RunLift(100);
 }

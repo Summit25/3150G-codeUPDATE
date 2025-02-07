@@ -13,24 +13,24 @@ void test2() {
     MoveEncoderPID(TestPara, -70, 13, 0.5, 0, true);
     wait(100,msec);
     MoveEncoderPID(TestPara, 80, 34, 0.4, 0, true);
-    MoveEncoderPID(TestPara, 60, 17, 0.5, 0, true);
+    MoveEncoderPID(TestPara, 30, 23, 0.5, 0, true);
     Clamp.set(true);
-    wait(100, msec);
+    wait(200, msec);
     RunRoller(100);
     wait(100, msec);
     TurnMaxTimePID(TestPara, -160, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 30, 0.5, -160, true);
+    MoveEncoderPID(TestPara, -80, 31, 0.5, -160, true);
     wait(100, msec);
-    MoveEncoderPID(TestPara, 80, 9, 0.5, -160, true);
-    TurnMaxTimePID(TestPara, -145, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 15, 0.5, -145, true);
+    MoveEncoderPID(TestPara, 80, 6, 0.5, -160, true);
+    TurnMaxTimePID(TestPara, -148, 0.4, true);
+    MoveEncoderPID(TestPara, -80, 11, 0.5, -148, true);
     wait(200, msec);
-    MoveEncoderPID(TestPara, 80, 40, 0.5, -145, true);
+    MoveEncoderPID(TestPara, 80, 40, 0.5, -148, true);
     TurnMaxTimePID(TestPara, -120, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 32, 0.5, -120, true);
-    wait(200, msec);
+    MoveEncoderPID(TestPara, -80, 45, 0.5, -120, true);
+    wait(400, msec);
     TurnMaxTimePID(TestPara, 90, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 42, 0.5, 90, true);
+    MoveEncoderPID(TestPara, -80, 35, 0.5, 90, true);
     RunLift(100);
 
     

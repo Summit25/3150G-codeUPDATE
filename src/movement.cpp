@@ -119,6 +119,36 @@ Stake.spin(forward,(double)val/100.0*12,volt);
 Stake.setStopping(hold);
 }
 
+// Function to move the lift to a target position
+void runLiftToTarget(int targetPosition) {
+  int pow1 = 0;
+  
+  // Move lift to target position
+  while (true) {
+    // Move up if we're below the target position
+    if (abs(LiftSensor.position(degrees)) < targetPosition - 10) {  // Target position with tolerance
+      RunLift(100);  // Move the lift upwards
+    } 
+    // Move down if we're above the target position
+    else if (abs(LiftSensor.position(degrees)) > targetPosition + 10) {
+      RunLift(-100);  // Move the lift downwards
+    }
+    else {
+      // Stop the lift when we're within tolerance of the target position
+      RunLift(0);
+      break;  // Exit the loop once the lift is at the target
+    }
+
+    // Small delay to avoid overwhelming the system
+    task::sleep(20);  
+  }
+
+  // Ensure the lift is stopped and held at the target position
+  Stake.setStopping(hold);
+  Stake.stop();
+}
+
+
 int PrevE;//Error at t-1
 
 /** Moves the robot forward or backward. Negative speed moves

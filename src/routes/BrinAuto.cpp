@@ -10,15 +10,10 @@ void test7() {
     // declare initial conditions
     //PIDDataSet TestPara={4,0.1,0.2};
     PIDDataSet TestPara={1.5,0.1,0.15};
-    MoveEncoderPID(TestPara, 80, 20, 0.4, 0, true);
-    MoveEncoderPID(TestPara, 40, 15, 0.5, 0, true);
+    MoveEncoderPID(TestPara, -70, 13, 0.5, 0, true);
+    wait(100,msec);
+    MoveEncoderPID(TestPara, 80, 34, 0.4, 0, true);
+    MoveEncoderPID(TestPara, 30, 23, 0.5, 0, true);
     Clamp.set(true);
     wait(200, msec);
-    RunRoller(100);
-    wait(100, msec);
-    TurnMaxTimePID(TestPara, -60, 0.4, true);
-    MoveEncoderPID(TestPara, -80, 25, 0.5, -60, true);
-    TurnMaxTimePID(TestPara, -20, 0.4, true);
-    MoveEncoderPID(TestPara, 80, 30, 0.5, -20, true);
-    RunRoller(30);
 }
